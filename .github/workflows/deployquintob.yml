@@ -34,7 +34,7 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
       - name: Construir la imagen
-        run: docker build -t ghcr.io/Isfran2305/holaflask:1.0.0 .
+        run: docker build -t ghcr.io/isfran2305/holaflask:1.0.0 .
 
       - name: Iniciar sesión en GitHub Container Registry
         run: echo "${{ secrets.TOKEN_WR}}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin"
